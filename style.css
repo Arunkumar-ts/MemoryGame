@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* overlayer for start */
+.overlayer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(8, 160, 160, 0.4);
+}
+.overlayer .startlayer button{
+    margin: 20px;
+    padding: 5px 10px; 
+    color:white;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color:rgba(2, 156, 156, 0.5) ;
+    border: 2px solid white;
+}
+.overlayer .startlayer{
+    background-color: rgba(6, 134, 134,0.8);
+    padding:20px;
+    border-radius: 10px;
+    color:white;
+    box-shadow: 3px 3px 15px 1px rgba(17, 17, 17, 0.7);
+    border: 1px solid rgb(7, 6, 6);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* game page */
+.gamelayer{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+}
+.gamelayer .game{
+    background-color: rgba(6, 134, 134,0.4);
+    padding: 10px;
+    box-shadow: 1px 1px 10px 1px rgb(73, 73, 73);
+    border-radius: 10px;
+}
+.gamelayer .game .boxs{
+    display: flex;
+    padding: 10px;
+}
+.gamelayer .game .boxs .box{
+    padding: 10px;
+    margin: 20px;
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    background-color:rgba(2, 156, 156, 0.5);
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 1px rgb(73, 73, 73);
+}
+.gamelayer .game .boxs .box:active{
+    animation:ret 0.4s linear 0.5;
+}
+
+@keyframes ret{
+    from{
+        transform: rotateY(360deg);
+    }
+}
