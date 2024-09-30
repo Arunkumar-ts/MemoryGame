@@ -67,18 +67,31 @@ body{
     padding: 10px;
     margin: 20px;
     width: 130px;
+    z-index: 44;
     height: 130px;
+    position: relative;
     border-radius: 10px;
     background-color:rgba(2, 156, 156, 0.5);
     cursor: pointer;
     box-shadow: 1px 1px 10px 1px rgb(73, 73, 73);
 }
-.gamelayer .game .boxs .box:active{
-    animation:ret 0.4s linear 0.5;
-}
-
-@keyframes ret{
+/* .gamelayer .game .boxs .box:active{
+    animation:ret 0.7s linear 0.5;
+} */
+@keyframes rot{
     from{
-        transform: rotateY(360deg);
+        transform: rotateY(180deg);
     }
+}
+.innerbox1,.innerbox2,.innerbox3,.innerbox4,.innerbox5,.innerbox6,.innerbox7,.innerbox8,.innerbox9,.innerbox10,.innerbox11,.innerbox12{
+    padding: 10px;
+    top:0;
+    left:0;
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    
+    cursor: pointer;
+    display: none;
+    position: absolute;
 }
