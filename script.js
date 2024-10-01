@@ -6,7 +6,7 @@ function start(event){
     overlayer.style.display="none";
     gamelayer.style.display="flex";
 }
-var first;
+var first,finner,sinner;
 var box1=document.querySelector(".box1");
 var box2=document.querySelector(".box2");
 var box3=document.querySelector(".box3");
@@ -38,11 +38,25 @@ function box1f(){
         innerbox1.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox1.style.display="none";
-    },650);
-    setTimeout(()=>{
         box1.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox1");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox1");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox1");
+    }
+
 }
 function box2f(){
     box2.style.animation="rot 0.8s linear 1";
@@ -50,11 +64,24 @@ function box2f(){
         innerbox2.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox2.style.display="none";
-    },650);
-    setTimeout(()=>{
         box2.style.animation="";
     },1000);
+     if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox2");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox2");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox2");
+    }
 }
 function box3f(){
     box3.style.animation="rot 0.8s linear 1";
@@ -62,23 +89,52 @@ function box3f(){
         innerbox3.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox3.style.display="none";
-    },650);
-    setTimeout(()=>{
         box3.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox3");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox3");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox3");
+    }
 }
 function box4f(){
     box4.style.animation="rot 0.8s linear 1";
     setTimeout(()=>{
         innerbox4.style.display="block";
     },300);
-    setTimeout(()=>{
-        innerbox4.style.display="none";
-    },650);
+    // setTimeout(()=>{
+    //     innerbox4.style.display="none";
+    // },650);
     setTimeout(()=>{
         box4.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox4");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox4");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox4");
+    }
 }
 function box5f(){
     box5.style.animation="rot 0.8s linear 1";
@@ -86,11 +142,24 @@ function box5f(){
         innerbox5.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox5.style.display="none";
-    },650);
-    setTimeout(()=>{
         box5.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox5");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox5");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox5");
+    }
 }
 
 function box6f(){
@@ -99,11 +168,24 @@ function box6f(){
         innerbox6.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox6.style.display="none";
-    },650);
-    setTimeout(()=>{
         box6.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox6");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox6");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox6");
+    }
 }
 
 function box7f(){
@@ -112,11 +194,24 @@ function box7f(){
         innerbox7.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox7.style.display="none";
-    },650);
-    setTimeout(()=>{
         box7.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox7");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox7");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox7");
+    }
 }
 function box8f(){
     box8.style.animation="rot 0.8s linear 1";
@@ -124,11 +219,24 @@ function box8f(){
         innerbox8.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox8.style.display="none";
-    },650);
-    setTimeout(()=>{
         box8.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox8");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox8");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox8");
+    }
 }
 function box9f(){
     box9.style.animation="rot 0.8s linear 1";
@@ -136,11 +244,24 @@ function box9f(){
         innerbox9.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox9.style.display="none";
-    },650);
-    setTimeout(()=>{
         box9.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox9");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox9");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox9");
+    }
 }
 function box10f(){
     box10.style.animation="rot 0.8s linear 1";
@@ -148,11 +269,24 @@ function box10f(){
         innerbox10.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox10.style.display="none";
-    },650);
-    setTimeout(()=>{
         box10.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox10");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox10");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox10");
+    }
 }
 function box11f(){
     box11.style.animation="rot 0.8s linear 1";
@@ -160,11 +294,24 @@ function box11f(){
         innerbox11.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox11.style.display="none";
-    },650);
-    setTimeout(()=>{
         box11.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox11");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox11");
+        }
+    }
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox11");
+    }
 }
 function box12f(){
     box12.style.animation="rot 0.8s linear 1";
@@ -172,12 +319,26 @@ function box12f(){
         innerbox12.style.display="block";
     },300);
     setTimeout(()=>{
-        innerbox12.style.display="none";
-    },650);
-    setTimeout(()=>{
         box12.style.animation="";
     },1000);
+    if(first){
+        if(first==1){
+            first=2;
+            sinner=document.querySelector(".innerbox12");
+        }
+        else if(first==2){
+            finner.style.display="none";
+            sinner.style.display="none";
+            first=1;
+            finner=document.querySelector(".innerbox12");
+        }
+    } 
+    else{
+        first=1;
+        finner=document.querySelector(".innerbox12");
+    }
 }
 
 var random=Math.ceil(Math.random()*6);
+var r1,r2,r3,r4,r5,r6;
 var pair1=1,pair2=2,pair3=3,pair4=4,pair5=5,pair6=6;

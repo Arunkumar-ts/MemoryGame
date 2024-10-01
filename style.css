@@ -90,7 +90,7 @@ body{
     width: 130px;
     height: 130px;
     border-radius: 10px;
-    
+    background-color: blue;
     cursor: pointer;
     display: none;
     position: absolute;
