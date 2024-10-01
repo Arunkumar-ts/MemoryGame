@@ -339,6 +339,72 @@ function box12f(){
     }
 }
 
-var random=Math.ceil(Math.random()*6);
+//For random values
 var r1,r2,r3,r4,r5,r6;
-var pair1=1,pair2=2,pair3=3,pair4=4,pair5=5,pair6=6;
+var pair1,pair2,pair3,pair4,pair5,pair6;
+
+r1=Math.ceil(Math.random()*6);
+pair1=r1;
+
+r2=Math.ceil(Math.random()*6);
+if(r1==r2){
+    do{
+        r2=Math.ceil(Math.random()*6);
+    }
+    while(r1==r2);
+    pair2=r2;
+}
+else{
+    pair2=r2;
+}
+
+r3=Math.ceil(Math.random()*6);
+if(r3==r1 || r3==r2){
+    do{
+        r3=Math.ceil(Math.random()*6);
+    }
+    while(r3==r1 || r3==r2);
+    pair3=r3;
+}
+else{
+    pair3=r3;
+}
+
+r4=Math.ceil(Math.random()*6);
+if(r4==r1 || r4==r2 || r4==r3){
+    do{
+        r4=Math.ceil(Math.random()*6);
+    }
+    while(r4==r1 || r4==r2 || r4==r3);
+    pair4=r4;
+}
+else{
+    pair4=r4;
+}
+
+r5=Math.ceil(Math.random()*6);
+if(r5==r1 || r5==r2 || r5==r3 || r5==r4){
+    do{
+        r5=Math.ceil(Math.random()*6);
+    }
+    while(r5==r1 || r5==r2 || r5==r3 || r5==r4);
+    pair5=r5;
+}
+else{
+    pair5=r5;
+}
+
+r6=Math.ceil(Math.random()*6);
+if(r6==r1 || r6==r2 || r6==r3 || r6==r4 || r6==r5){
+    do{
+        r6=Math.ceil(Math.random()*6);
+    }
+    while(r6==r1 || r6==r2 || r6==r3 || r6==r4 || r6==r5);
+    pair6=r6;
+}
+else{
+    pair6=r6;
+}
+
+//Fro change image
+
