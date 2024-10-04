@@ -32,6 +32,7 @@ var innerbox9=document.querySelector(".innerbox9");
 var innerbox10=document.querySelector(".innerbox10");
 var innerbox11=document.querySelector(".innerbox11");
 var innerbox12=document.querySelector(".innerbox12");
+var fcolor,scolor,fbox,sbox;
 function box1f(){
     box1.style.animation="rot 0.8s linear 1";
     setTimeout(()=>{
@@ -44,19 +45,29 @@ function box1f(){
         if(first==1){
             first=2;
             sinner=document.querySelector(".innerbox1");
+            sbox=document.querySelector("box1");
+            scolor=innerbox1.style.backgroundColor;
         }
         else if(first==2){
             finner.style.display="none";
             sinner.style.display="none";
             first=1;
+            if(fcolor==scolor){
+                fbox.style.display="none";
+                sbox.style.display="none";
+            }
+            fcolor=innerbox1.style.backgroundColor;
             finner=document.querySelector(".innerbox1");
+            fbox=document.querySelector("box1");
+   
         }
     }
     else{
         first=1;
         finner=document.querySelector(".innerbox1");
+        fbox=document.querySelector("box1");
+        fcolor=innerbox1.style.backgroundColor;
     }
-
 }
 function box2f(){
     box2.style.animation="rot 0.8s linear 1";
@@ -69,18 +80,28 @@ function box2f(){
      if(first){
         if(first==1){
             first=2;
+            scolor=innerbox2.style.backgroundColor;
             sinner=document.querySelector(".innerbox2");
+            sbox=document.querySelector("box2");
         }
         else if(first==2){
             finner.style.display="none";
             sinner.style.display="none";
             first=1;
+            if(fcolor==scolor){
+                fbox.style.display="none";
+                sbox.style.display="none";
+            }
+            fcolor=innerbox2.style.backgroundColor;
             finner=document.querySelector(".innerbox2");
+            fbox=document.querySelector("box2");
         }
     }
     else{
         first=1;
         finner=document.querySelector(".innerbox2");
+        fbox=document.querySelector("box2");
+        fcolor=innerbox2.style.backgroundColor;
     }
 }
 function box3f(){
@@ -95,17 +116,28 @@ function box3f(){
         if(first==1){
             first=2;
             sinner=document.querySelector(".innerbox3");
+            sbox=document.querySelector("box3");
+            scolor=innerbox3.style.backgroundColor;
         }
         else if(first==2){
             finner.style.display="none";
             sinner.style.display="none";
             first=1;
+            if(fcolor==scolor){
+                fbox.style.display="none";
+                sbox.style.display="none";
+            }
+            else{}
+            fcolor=innerbox3.style.backgroundColor;
+            fbox=document.querySelector("box3");
             finner=document.querySelector(".innerbox3");
         }
     }
     else{
         first=1;
         finner=document.querySelector(".innerbox3");
+        fbox=document.querySelector("box3");
+        fcolor=innerbox3.style.backgroundColor;
     }
 }
 function box4f(){
@@ -340,71 +372,50 @@ function box12f(){
 }
 
 //For random values
-var r1,r2,r3,r4,r5,r6;
-var pair1,pair2,pair3,pair4,pair5,pair6;
-
-r1=Math.ceil(Math.random()*6);
-pair1=r1;
-
-r2=Math.ceil(Math.random()*6);
-if(r1==r2){
-    do{
-        r2=Math.ceil(Math.random()*6);
+var randomar=[];
+randomar.push(100);
+while(randomar.length <=12){
+    var r=Math.ceil(Math.random()*12);
+    if(randomar.indexOf(r) === -1){
+        randomar.push(r);
     }
-    while(r1==r2);
-    pair2=r2;
-}
-else{
-    pair2=r2;
-}
-
-r3=Math.ceil(Math.random()*6);
-if(r3==r1 || r3==r2){
-    do{
-        r3=Math.ceil(Math.random()*6);
-    }
-    while(r3==r1 || r3==r2);
-    pair3=r3;
-}
-else{
-    pair3=r3;
-}
-
-r4=Math.ceil(Math.random()*6);
-if(r4==r1 || r4==r2 || r4==r3){
-    do{
-        r4=Math.ceil(Math.random()*6);
-    }
-    while(r4==r1 || r4==r2 || r4==r3);
-    pair4=r4;
-}
-else{
-    pair4=r4;
-}
-
-r5=Math.ceil(Math.random()*6);
-if(r5==r1 || r5==r2 || r5==r3 || r5==r4){
-    do{
-        r5=Math.ceil(Math.random()*6);
-    }
-    while(r5==r1 || r5==r2 || r5==r3 || r5==r4);
-    pair5=r5;
-}
-else{
-    pair5=r5;
-}
-
-r6=Math.ceil(Math.random()*6);
-if(r6==r1 || r6==r2 || r6==r3 || r6==r4 || r6==r5){
-    do{
-        r6=Math.ceil(Math.random()*6);
-    }
-    while(r6==r1 || r6==r2 || r6==r3 || r6==r4 || r6==r5);
-    pair6=r6;
-}
-else{
-    pair6=r6;
 }
 
 //Fro change image
+var color1="red";
+var color2="blue";
+var color3="yellow";
+var color4="green";
+var color5="black";
+var color6="white";
+
+var innerbox1of1=`.innerbox`+randomar.indexOf(1);
+var innerbox1of2=`.innerbox`+randomar.indexOf(2);
+document.querySelector(innerbox1of1).style.backgroundColor=color1;
+document.querySelector(innerbox1of2).style.backgroundColor=color1;
+
+var innerbox1of3=`.innerbox`+randomar.indexOf(3);
+var innerbox1of4=`.innerbox`+randomar.indexOf(4);
+document.querySelector(innerbox1of3).style.backgroundColor=color2;
+document.querySelector(innerbox1of4).style.backgroundColor=color2;
+
+var innerbox1of5=`.innerbox`+randomar.indexOf(5);
+var innerbox1of6=`.innerbox`+randomar.indexOf(6);
+document.querySelector(innerbox1of5).style.backgroundColor=color3;
+document.querySelector(innerbox1of6).style.backgroundColor=color3;
+
+var innerbox1of7=`.innerbox`+randomar.indexOf(7);
+var innerbox1of8=`.innerbox`+randomar.indexOf(8);
+document.querySelector(innerbox1of7).style.backgroundColor=color4;
+document.querySelector(innerbox1of8).style.backgroundColor=color4;
+
+var innerbox1of9=`.innerbox`+randomar.indexOf(9);
+var innerbox1of10=`.innerbox`+randomar.indexOf(10);
+document.querySelector(innerbox1of9).style.backgroundColor=color5;
+document.querySelector(innerbox1of10).style.backgroundColor=color5;
+
+var innerbox1of11=`.innerbox`+randomar.indexOf(11);
+var innerbox1of12=`.innerbox`+randomar.indexOf(12);
+document.querySelector(innerbox1of11).style.backgroundColor=color6;
+document.querySelector(innerbox1of12).style.backgroundColor=color6;
 
